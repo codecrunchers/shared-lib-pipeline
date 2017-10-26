@@ -1,5 +1,19 @@
-package com.codecrunchers.ci;
+package com.codecrunchers.ci
 
-public class BuildBuilder {
+abstract public class BuildBuilder {
+    protected Build build
+
+    Build getBuild(){
+        build
+    }
+
+    void createNewBuild(){
+        build = new Build()
+    }
+
+    abstract void setTitle()
+    abstract void setCompile()
+    abstract void setTest()
+    abstract void setDeploy()
 }
 

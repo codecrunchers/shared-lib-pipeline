@@ -1,5 +1,11 @@
-package com.codecrunchers.ci;
+package com.codecrunchers.ci
 
-public class LamdaBuilder {
+public class LamdaBuilder extends BuildBuilder {
+
+    void setTitle(){}
+    void setCompile(){}
+    void setTest(){}
+    void setDeploy(){}
+
 }
 
