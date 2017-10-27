@@ -1,9 +1,10 @@
 package com.codecrunchers.ci.builders
+
 import com.codecrunchers.ci.*
 
-public class LamdaBuilder extends BuildBuilder {
+public class LambdaBuilder extends BuildBuilder {
 
-    LamdaBuilder(){
+    LambdaBuilder(){
         createNewBuild()
     }
 

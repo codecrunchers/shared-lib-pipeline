@@ -1,4 +1,4 @@
-package com.codecrunchers.ci;
+package com.codecrunchers.ci
 
 import spock.lang.Specification
 

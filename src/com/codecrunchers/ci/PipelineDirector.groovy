@@ -1,4 +1,6 @@
 package com.codecrunchers.ci
+
+import com.codecrunchers.ci.builders.LambdaBuilder
 import groovy.transform.TupleConstructor
 
 @TupleConstructor
@@ -52,7 +54,7 @@ public class PipelineDirector {
 private BuildBuilder assignBuilder(){
     switch(builderId) {
         case "lambda":
-            builder =  LambdaBuilder()
+            builder =  new LambdaBuilder()
         default:
                 throw new RuntimeException("Unsupported Builder");
     }
