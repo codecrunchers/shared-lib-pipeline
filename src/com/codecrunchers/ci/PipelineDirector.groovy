@@ -11,8 +11,9 @@ public class PipelineDirector {
     String serviceId
 
     void construct(body) {
-        assignBuilder()
         println "Initiating Build with ${builder.getTitle()}, ${executor} for ${serviceId}"
+
+        assignBuilder()
         def config = [:]
         body.resolveStrategy = Closure.DELEGATE_FIRST
         body.delegate = config
@@ -53,6 +54,8 @@ public class PipelineDirector {
 }
 
 private BuildBuilder assignBuilder(){
+    println "Assinging Builder to ${serviceId}: ${builderId}"
+
     switch(builderId) {
         case "lambda":
             builder =  new LambdaBuilder()
