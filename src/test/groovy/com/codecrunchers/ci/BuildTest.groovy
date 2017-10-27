@@ -21,6 +21,23 @@ class BuildTest extends Specification {
             build.deploy  =~ /deploy/
 
     }
+
+    def "Build has commands for lifecycle with asignment"() {
+            setup:
+            def build =  new com.codecrunchers.ci.Build()
+            when:
+                build.setTitle("lambdabuild")
+                build.setCompile("compile")
+                build.setTest("test")
+                build.setDeploy("deploy")
+            then:
+            build.title == "lambdabuild"
+            build.compile =~ /compile/
+            build.test  =~ /test/
+            build.deploy  =~ /deploy/
+
+    }
+
 }
 
 

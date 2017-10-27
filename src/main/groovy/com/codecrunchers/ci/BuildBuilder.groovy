@@ -7,7 +7,7 @@ abstract public class BuildBuilder {
         build
     }
 
-    void createNewBuild(){
+    protected void createNewBuild(){
         build = new Build()
     }
 
