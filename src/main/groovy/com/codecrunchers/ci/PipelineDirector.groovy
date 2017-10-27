@@ -1,7 +1,7 @@
 package com.codecrunchers.ci
 import groovy.transform.TupleConstructor
 
-@TupleConstructor()
+@TupleConstructor
 public class PipelineDirector {
     BuildBuilder builder
     String builderId
@@ -59,6 +59,5 @@ private BuildBuilder assignBuilder(){
 }
 
 }
-
 
 

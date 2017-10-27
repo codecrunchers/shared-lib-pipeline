@@ -1,3 +1,7 @@
+import com.codecrunchers.ci.*
+import com.codecrunchers.ci.builders.*
+
+
 def call(body) {
 
     new com.codecrunchers.ci.PipelineDirector(
