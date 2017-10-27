@@ -1,12 +1,11 @@
 import com.codecrunchers.ci.*
-import com.codecrunchers.ci.builders.*
 
 
 def call(body) {
 
-    new com.codecrunchers.ci.PipelineDirector(
+    new PipelineDirector(
             builderId: "lambda",
-            executor: "",
+            executor: "test-executor",
             serviceId: "test").
         construct(body)
 }

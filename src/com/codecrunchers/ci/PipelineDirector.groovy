@@ -12,7 +12,7 @@ public class PipelineDirector {
 
     void construct(body) {
         assignBuilder()
-        new com.codecrunchers.ci.PipelineDirector()
+        println "Initiating Build with ${builder.getTitle()}, ${executor} for ${serviceId}"
         def config = [:]
         body.resolveStrategy = Closure.DELEGATE_FIRST
         body.delegate = config
