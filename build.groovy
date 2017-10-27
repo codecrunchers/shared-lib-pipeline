@@ -1,14 +1,9 @@
-library identifier: 'custom-lib@master', retriever: modernSCM(
+library identifier: 'builder@master', retriever: modernSCM(
   [$class: 'GitSCMSource',
-   remote: 'git@git.mycorp.com:my-jenkins-utils.git',
-   credentialsId: 'my-private-key'])
+   remote: 'https://github.com/codecrunchers/shared-lib-pipeline.git'])
 
-@Library("builder") 
-import com.codecrunchers.ci.*
-import com.codecrunchers.ci.builders.*
 
 standardPipeline {
-    projectName = "Project1"
-    serverDomain = "Project1 Server Domain"
 }
+
 
