@@ -11,7 +11,7 @@ public class PipelineDirector {
     String serviceId
 
     void construct(body) {
-        println "Initiating Build with ${builder.title()}, ${executor} for ${serviceId}"
+        println "Initiating Build with ${builder.title}, ${executor} for ${serviceId}"
 
         assignBuilder()
         def config = [:]
