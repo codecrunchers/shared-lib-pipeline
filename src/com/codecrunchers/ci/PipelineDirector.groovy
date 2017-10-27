@@ -44,6 +44,7 @@ public class PipelineDirector {
                         sh "echo 'deploying to server ${config.serverDomain}...'"
                     }
                 } catch (err) {
+                    println "${err}"
                     currentBuild.result = 'FAILED'
                         throw err
                 }
